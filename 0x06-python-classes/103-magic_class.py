@@ -1,21 +1,22 @@
 #!/usr/bin/python3
+"""writing a docstring"""
 import math
 
 
 class MagicClass:
+    """set up the magic"""
 
-    """Class that stores the properties
-    of a circumference"""
     def __init__(self, radius=0):
+        """ writing another docstring """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
         self.__radius = radius
 
-    """ Method that calculates the area of the circumference """
     def area(self):
-        return ((self.__radius ** 2) * math.pi)
+        """again with the docstring"""
+        return self.__radius ** 2 * math.pi
 
-    """ Method that calculates the perimeter of a circumference """
     def circumference(self):
-        return (2 * math.pi * self.__radius)
+        """such docstring"""
+        return 2 * math.pi * self.__radius
