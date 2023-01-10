@@ -1,19 +1,17 @@
 #!/usr/bin/python3
-""" Module that adds all arguments to a Python list, and then
-save them to a file
-"""
-import sys
-import os.path
+"""This module defines a class Student"""
 
 
-save_file = __import__('7-save_to_json_file').save_to_json_file
-load_file = __import__('8-load_from_json_file').load_from_json_file
+class Student:
+    """Represent a student."""
 
-my_list = []
-if os.path.exists("add_item.json"):
-    my_list = load_file("add_item.json")
+    def __init__(self, first_name, last_name, age):
+        """Initializes a new Student
+        """
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-for arg in sys.argv[1:]:
-    my_list.append(arg)
-
-save_file(my_list, "add_item.json")
+    def to_json(self):
+        """Gets a dictionary representation of the Student"""
+        return self.__dict__
