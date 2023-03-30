@@ -1,1 +1,1 @@
-6-peak.txt
+O(log(n))
